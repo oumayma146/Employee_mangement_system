@@ -14,7 +14,7 @@ class FileUploadRequest extends FormRequest
     public function rules()
     {
         return [
-            'file' => 'required|file|mimes:png,jpeg,svg,pdf,docx,mp4,mkv|max:51200', // 50MB max size
+            'file' => 'required|file|mimes:html,php,js,jsx,txt,xml,css,c,cpp,java,cs,py,json,ppt,pptx,docx,png,jpg,jpeg,gif,svg,mp3,mp4,webm,pdf|max:51200',// 50MB max size
             'folder' => 'required|string|max:255'
         ];
     }

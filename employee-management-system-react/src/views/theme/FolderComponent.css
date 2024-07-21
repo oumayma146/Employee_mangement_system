@@ -1,0 +1,63 @@
+.folder-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.folder {
+  margin-bottom: 20px;
+}
+
+.folder h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.folder ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.folder li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.folder-icon {
+  color: #ffcc00;
+}
+
+.file-icon {
+  color: #1e90ff;
+}
+
+.file-name {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.file-name:hover {
+  text-decoration: none;
+}
+
+.download-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.download-icon {
+  margin-right: 5px;
+}
