@@ -55,17 +55,12 @@ class AuthController extends Controller
         if (!Auth::attempt($attr)) {
             return $this->error('Failed to login! check out your credentials.', 401);
         }
-      //  $userauth = auth()->user()->load('roles');
+     
         $user = Auth::user();
         
      
         $token = $user->createToken('auth_token')->plainTextToken;
-        /* return response()->json([
-         
-            'token' => auth()->user()->createToken('munaf')->plainTextToken ,
-            'role'=> $userauth->roles
-     
-        ], 200); */
+       
         return response()->json([
             'user' => $user,
             'roles' => $user->getRoleNames(), 
@@ -94,7 +89,7 @@ class AuthController extends Controller
     {
         try {
             $user = Auth::user();
-            // Revoke current user token
+        
             $user
                 ->tokens()
                 ->where("id", $user->currentAccessToken()->id)

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react'
-import Role from './views/theme/role/Role'
+
 
 const Dashboard = React.lazy(() => import('./views/dashboard/AdminDashboard'))
 const DashboardEMP = React.lazy(() => import('./views/dashboard/EmployeeDashboard'))

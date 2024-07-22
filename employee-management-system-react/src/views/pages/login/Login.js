@@ -44,10 +44,10 @@ function Login() {
   useEffect(() => {
     console.log("token",token,"local token",localStorage.getItem('token'))
     if (token || localStorage.getItem('token') && localStorage.getItem('role')=="admin") {
-      navigate('/dashboard/AdminDashboard');
+      navigate('/dashboardAdmin');
     }else if(token || localStorage.getItem('token') && localStorage.getItem('role')=="employee")
     {
-      navigate('/dashboard/EmployeeDashboard');
+      navigate('/dashboardEMP');
     }
 
     

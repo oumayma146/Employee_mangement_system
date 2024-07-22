@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Str;
-use App\Http\Resources\UserResource;
 use App\Http\Resources\RolesResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;

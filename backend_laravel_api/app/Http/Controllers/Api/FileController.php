@@ -36,8 +36,9 @@ class FileController extends Controller
         ]);
 
         $user = Auth::user();
+        $date = now()->format('Y-m-d');
         $folder = $request->input('folder');
-        $basePath = "uploads/{$user->id}";
+        $basePath = "uploads/{$user->id}/{$date}";
 
         if ($user->can('create folders')) {
             $fullPath = "{$basePath}/{$folder}";
@@ -54,7 +55,7 @@ class FileController extends Controller
     public function download($file)
     {
         $user = Auth::user();
-        $path = "uploads/{$user->id}/{$file}";
+        $path = "uploads/{$user->id}/{$date}/{$file}";
 
         if (Storage::exists($path)) {
             return Storage::download($path);

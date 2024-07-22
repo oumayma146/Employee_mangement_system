@@ -15,7 +15,6 @@ import permissionReducer from './store/reducer/permission'
 import RolePermissionReducer from './store/reducer/RolePermission'
 import FileReducer from './store/reducer/uploadReducer'
 import employeeReducer from './store/reducer/Employee'
-import DashboardReducer from './store/reducer/dashboard'
 import folderReducer from './store/reducer/folderReducer';
 const rootReducer = combineReducers({
   auth:authReducer,
@@ -25,7 +24,7 @@ const rootReducer = combineReducers({
   file:FileReducer,
   folder:folderReducer,
   emp:employeeReducer,
-  dashboard:DashboardReducer,
+ 
  })
  const store =createStore(rootReducer,applyMiddleware(ReduxThunk));
  
