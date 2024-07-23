@@ -69,12 +69,16 @@ const Employee = () => {
     setUpdateEmail(newEmploye[0].email)
     setUpdateRole({ label: newEmploye[0]?.roles[0]?.name, value: newEmploye[0]?.roles[0]?.id })
   }
-  const updateEmployeeHandler = (id) => {
-    dispatch(UpdateEmployee(updateName, updateEmail, updateRole, id, updateEmploye)).then(() => {
-      dispatch(getEmployee())
-      setUpdateVisible(false)
-    })
-  }
+  const updateEmployeeHandler = () => {
+    dispatch(UpdateEmployee(updateName, updateEmail, updateRole.value, idOfElementToBeUpdate)) 
+        .then(() => {
+            dispatch(getEmployee());
+            setUpdateVisible(false);
+        })
+        .catch(error => {
+            console.error('Error updating employee:', error);
+        });
+};
 
   const SearchEmployeeHandler = (name) => {
     dispatch(SearchEmployee(name))

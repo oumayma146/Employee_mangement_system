@@ -38,7 +38,7 @@ class FileController extends Controller
         $user = Auth::user();
         $date = now()->format('Y-m-d');
         $folder = $request->input('folder');
-        $basePath = "uploads/{$user->id}/{$date}";
+        $basePath = "uploads/{$user->id}";
 
         if ($user->can('create folders')) {
             $fullPath = "{$basePath}/{$folder}";

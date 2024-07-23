@@ -97,7 +97,7 @@ console.log(folders)
       setFile(null)
       setProgress(0)
       setVisibleUploadFile(false)
-      dispatch(listFoldersAndFiles())
+      dispatch(fetchAllFolders())
     } catch (error) {
       addNotification(error.message, 'danger')
     }
@@ -111,8 +111,8 @@ console.log(folders)
     dispatch(createFolder(folderName))
     setFolderName('')
     setVisibleCreateFolder(false)
-    dispatch(listFoldersAndFiles())
-    window.location.reload()
+    dispatch(fetchAllFolders())
+    
   }
 
 
